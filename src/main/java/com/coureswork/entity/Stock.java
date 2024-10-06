@@ -1,4 +1,4 @@
-package com.coureswork.Coureswork.entity;
+package com.coureswork.entity;
 
 import java.time.LocalDateTime;
 

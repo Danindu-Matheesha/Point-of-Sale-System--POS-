@@ -1,4 +1,4 @@
-package com.coureswork.Coureswork.entity;
+package com.coureswork.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,7 +11,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Item {
+public class ItemCategory {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,9 +19,4 @@ public class Item {
 
     @Column(nullable = false)
     private String name;
-
-    @Column(nullable = false)
-    private Double price;
-
-    private String description;
 }

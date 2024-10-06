@@ -1,4 +1,4 @@
-package com.coureswork.Coureswork;
+package com.coureswork;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
