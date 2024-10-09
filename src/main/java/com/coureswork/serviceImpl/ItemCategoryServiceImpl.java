@@ -24,4 +24,9 @@ public class ItemCategoryServiceImpl implements ItemCategoryService {
     public ItemCategory createItemCategory(ItemCategory itemCategory) {
         return itemCategoryRepository.save(itemCategory);
     }
+
+    @Override
+    public ItemCategory getItemCategoryById(Long itemcategoryid){
+        return itemCategoryRepository.findById(itemcategoryid).orElse(null);
+    }
 }

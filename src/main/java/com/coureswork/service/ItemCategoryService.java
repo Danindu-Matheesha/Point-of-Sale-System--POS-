@@ -10,4 +10,5 @@ import com.coureswork.entity.ItemCategory;
 public interface ItemCategoryService {
     List<ItemCategory> getAllItemCategories();
     ItemCategory createItemCategory(ItemCategory itemCategory);
+    ItemCategory getItemCategoryById(Long itemcategoryid);
 }
