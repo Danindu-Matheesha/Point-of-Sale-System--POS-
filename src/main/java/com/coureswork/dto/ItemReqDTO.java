@@ -10,4 +10,5 @@ public class ItemReqDTO {
     private Double price;
     private String description;
     private Long itemcategoryId;
+    private Integer quantity;
 }

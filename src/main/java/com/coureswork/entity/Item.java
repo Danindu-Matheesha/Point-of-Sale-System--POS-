@@ -27,6 +27,8 @@ public class Item {
 
     private String description;
 
+    private Integer quantity;
+
     @ManyToOne
     @JoinColumn(name = "category_id")
     private ItemCategory itemCategory;

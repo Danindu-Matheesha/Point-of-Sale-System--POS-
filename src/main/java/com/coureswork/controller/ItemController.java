@@ -41,6 +41,7 @@ public class ItemController {
         item.setName(itemReqDTO.getName());
         item.setPrice(itemReqDTO.getPrice());
         item.setDescription(itemReqDTO.getDescription());
+        item.setQuantity(itemReqDTO.getQuantity());
 
         ItemCategory itemCategory = itemCategoryService.getItemCategoryById(itemReqDTO.getItemcategoryId());
         item.setItemCategory(itemCategory);
@@ -67,6 +68,7 @@ public class ItemController {
         item.setName(itemReqDTO.getName());
         item.setPrice(itemReqDTO.getPrice());
         item.setDescription(itemReqDTO.getDescription());
+        item.setQuantity(itemReqDTO.getQuantity());
 
         ItemCategory itemCategory = itemCategoryService.getItemCategoryById(itemReqDTO.getItemcategoryId());
         item.setItemCategory(itemCategory);
