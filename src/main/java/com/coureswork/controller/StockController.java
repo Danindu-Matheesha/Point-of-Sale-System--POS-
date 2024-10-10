@@ -39,13 +39,11 @@ public class StockController {
 
         List<Long> itemIds = stockDTO.getItemIds();
         List<Item> stockedItems = new ArrayList<>();
-
+        
         itemIds.forEach(itemId -> {
             Item item = itemService.getItemById(itemId);
-
             if (item != null) {
                 stockedItems.add(item);
-
                 stock.setQuantity(item.getQuantity() - stock.getQuantity());
             }
         });
@@ -55,36 +53,5 @@ public class StockController {
 
         return ResponseEntity.status(201).body(stock);
     }
-
-//     @PostMapping("/stock")
-// public ResponseEntity<Stock> createStock(@RequestBody StockDTO stockDTO) {
-//     Stock stock = new Stock();
-//     stock.setQuantity(0.0);
-
-//     List<Long> itemIds = stockDTO.getItemIds();
-//     List<Item> stockedItems = new ArrayList<>();
-
-//     for (Long itemId : itemIds) {
-//         Item item = itemService.getItemById(itemId);
-
-//         if (item != null) {
-//             stockedItems.add(item);
-
-//             // Check if the item's quantity is not null before subtracting
-//             Integer itemQuantity = item.getQuantity();
-//             if (itemQuantity != null) {
-//                 stock.setQuantity(itemQuantity - stock.getQuantity());
-//             } else {
-//                 // Handle the null case (e.g., log a warning or set a default value)
-//                 System.out.println("Item with ID " + itemId + " has a null quantity.");
-//             }
-//         }
-//     }
-
-//     stock.setItemedStocks(stockedItems);
-//     stockService.createStock(stock);
-
-//     return ResponseEntity.status(201).body(stock);
-// }
 
 }
