@@ -46,7 +46,7 @@ public class StockController {
             Item item = itemService.getItemById(itemId);
             if (item != null) {
                 stockedItems.add(item);
-                stock.setQuantity(item.getQuantity() - stock.getQuantity());
+                stock.setQuantity(item.getQuantity() + stock.getQuantity());
             }
         });
 
